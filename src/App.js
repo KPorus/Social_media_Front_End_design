@@ -3,18 +3,18 @@ import { Add, Settings } from '@mui/icons-material';
 import { Button, Typography } from '@mui/material';
 
 function App() {
-  const TestButton = styled(Button)({
-    backgroundColor: "skyblue",
+  const TestButton = styled(Button)(({ theme }) => ({
+    backgroundColor: theme.palette.primary.light,
     color: "red",
     "&:hover": {
       backgroundColor: "orange",
       color: "white",
     },
-  });
+  }));
   return (
     <div>
       <Button variant='text'>Text</Button>
-      <Button variant='contained' color='secondary' startIcon={<Settings />}>
+      <Button variant='contained' color='other' startIcon={<Settings />}>
         Settings
       </Button>
       <Button
