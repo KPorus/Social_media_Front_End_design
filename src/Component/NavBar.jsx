@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { BugReport } from '@mui/icons-material';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, InputBase, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 
 const NavBar = () => {
@@ -10,6 +10,18 @@ const NavBar = () => {
             justifyContent:"space-between",
         }
     )
+
+    const SearchBar = styled("div")({
+      backgroundColor:"white",
+      padding:"2px, 10px",
+      borderRadius:"0.5rem",
+      width:"40%"
+    })
+
+    const IconBox = styled(Box)({
+      backgroundColor:"white",
+      padding:"10px, 10px",      
+    })
     return (
       <AppBar position='sticky'>
         <StyleTool>
@@ -17,6 +29,8 @@ const NavBar = () => {
             Bug Block
           </Typography>
           <BugReport sx={{display:{xs:"block", sm:"none"}}}></BugReport>
+          <SearchBar><InputBase placeholder='Search...'/></SearchBar>
+          <IconBox>Icon</IconBox>
         </StyleTool>
       </AppBar>
     );
