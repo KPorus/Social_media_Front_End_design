@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { AppBar, Toolbar } from '@mui/material';
-import { Box } from '@mui/system';
+import { BugReport } from '@mui/icons-material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 
 const NavBar = () => {
@@ -12,7 +12,12 @@ const NavBar = () => {
     )
     return (
       <AppBar position='sticky'>
-        <StyleTool>NavBar</StyleTool>
+        <StyleTool>
+          <Typography variant='h6' sx={{display:{xs:"none", sm:"block"}}}>
+            Bug Block
+          </Typography>
+          <BugReport sx={{display:{xs:"block", sm:"none"}}}></BugReport>
+        </StyleTool>
       </AppBar>
     );
 };
