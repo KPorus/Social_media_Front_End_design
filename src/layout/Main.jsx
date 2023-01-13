@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { Stack } from '@mui/system';
 import { Outlet } from 'react-router-dom';
+import AddPost from '../Component/AddPost';
 import NavBar from '../Component/NavBar';
 import RightBar from '../Component/RightBar';
 import Sidebar from '../Component/Sidebar';
@@ -14,6 +15,7 @@ const Main = () => {
           <Outlet></Outlet>
           <RightBar></RightBar>
         </Stack>
+        <AddPost></AddPost>
       </Box>
     );
 };
