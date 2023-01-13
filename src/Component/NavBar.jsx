@@ -44,8 +44,8 @@ const NavBar = () => {
   return (
     <AppBar position='sticky'>
       <StyleTool>
-        <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" } }}>
-          Bug Block
+        <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" }, fontWeight:700 }}>
+          Bugs
         </Typography>
         <BugReport sx={{ display: { xs: "block", sm: "none" } }}></BugReport>
         <SearchBar>
@@ -75,7 +75,7 @@ const NavBar = () => {
           <Avatar
             sx={{ width: "30px", height: "30px" }}
             src='https://i.ibb.co/4F1tyPq/170517-Jennie-Kim-Blackpink-04.jpg'></Avatar>
-          <Typography variant='span'>Fardin</Typography>
+          <Typography variant='span'>Anika</Typography>
         </UserIcon>
       </StyleTool>
       <Menu

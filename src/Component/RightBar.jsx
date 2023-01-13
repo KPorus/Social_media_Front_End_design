@@ -8,7 +8,7 @@ const RightBar = () => {
         flex={2}
         bgcolor='lightblue'
         sx={{ display: { xs: "none", sm: "block" } }}>
-        RightBer
+        <Box position="fixed">RightBer</Box>
       </Box>
     );
 };
