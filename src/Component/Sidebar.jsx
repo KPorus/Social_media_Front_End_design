@@ -6,6 +6,7 @@ import {
   ModeNight,
   PersonAdd,
   Settings,
+  WbSunny,
 } from "@mui/icons-material";
 import {
   List,
@@ -19,7 +20,17 @@ import { Box } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({setmode, mode}) => {
+  const modeChange = ()=>
+  {
+    if(mode==="light")
+    {
+      setmode("dark")
+    }
+    else{
+      setmode("light")
+    }
+  }
   return (
     <Box p={2} flex={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -88,9 +99,11 @@ const Sidebar = () => {
           <ListItem disablePadding components='a'>
             <ListItemButton>
               <ListItemIcon>
-                <ModeNight />
+                {
+                  mode === "light" ? <ModeNight />: <WbSunny/>
+                }
               </ListItemIcon>
-              <Switch />
+              <Switch onClick={modeChange} />
             </ListItemButton>
           </ListItem>
         </List>

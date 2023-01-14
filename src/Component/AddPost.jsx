@@ -59,10 +59,11 @@ const AddPost = () => {
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'>
         <Box
+          bgcolor={"background.default"}
+          color={"text.primary"}
           sx={{
             width: 480,
             height: 280,
-            bgcolor: "white",
             justifyContent: "center",
           }}
           p={3}>
